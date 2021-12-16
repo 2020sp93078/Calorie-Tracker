@@ -15,7 +15,7 @@ class DailyProgress extends StatelessWidget {
     return CircularPercentIndicator(
       radius: 300,
       lineWidth: 8.0,
-      percent: caloriesConsumed / totalCalories,
+      percent: (caloriesConsumed / totalCalories).clamp(0, 1),
       progressColor: kGreen,
       backgroundColor: kLightBlack,
       center: Padding(
