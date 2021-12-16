@@ -1,6 +1,5 @@
-import 'package:calorie_tracker/common/constants.dart';
 import 'package:calorie_tracker/models/sport_event.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:calorie_tracker/services/sport_event_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
@@ -20,31 +19,16 @@ class _SportEventScreenState extends State<SportEventScreen> {
   void initState() {
     super.initState();
 
-    _fetchSportEvents = fetchSportEvents();
-  }
-
-  Future<List<SportEvent>> fetchSportEvents() async {
-    List<SportEvent> sportEvents = [];
-    QuerySnapshot response =
-        await FirebaseFirestore.instance.collection('sport_events').get();
-
-    for (var element in response.docs) {
-      SportEvent sportEvent =
-          SportEvent.fromMap(element.data() as Map<String, dynamic>);
-
-      sportEvents.add(sportEvent);
-    }
-
-    return sportEvents;
+    _fetchSportEvents = SportEventService.fetchSportEvents();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kBackgroundColor,
+      backgroundColor: const Color(0xFF262626),
       appBar: AppBar(
         title: const Text("Sport Events"),
-        backgroundColor: kBackgroundColor,
+        backgroundColor: const Color(0xFF262626),
       ),
       body: Padding(
         padding: EdgeInsets.only(
@@ -98,7 +82,9 @@ class _SportEventScreenState extends State<SportEventScreen> {
                               child: Container(
                                 height: Get.height * 0.1,
                                 width: Get.width,
-                                color: (i % 2 == 0) ? kGreen : kOrange,
+                                color: (i % 2 == 0)
+                                    ? const Color(0xFFA2C101)
+                                    : const Color(0xFFFDA104),
                                 padding: EdgeInsets.all(Get.width * 0.02),
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
