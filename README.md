@@ -14,3 +14,9 @@ A cross platform mobile application :iphone: developed in flutter to keep track 
 
 <li> For each 20 steps :paw_prints: counted by pedometer we deduct one calorie from the number of calories consumed by the user per day.
 </ul>
+
+# Screenshots
+<p float="left">
+<img src="https://user-images.githubusercontent.com/48833965/146385089-33efa578-18d3-4982-b6f7-0ff18ea03bb6.png"  />
+</p>
+
