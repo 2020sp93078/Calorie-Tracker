@@ -16,7 +16,9 @@ class DailyProgress extends StatelessWidget {
       radius: 300,
       lineWidth: 8.0,
       percent: (caloriesConsumed / totalCalories).clamp(0, 1),
-      progressColor: kGreen,
+      progressColor: ((caloriesConsumed / totalCalories) > 1)
+          ? const Color(0xFFFDC402)
+          : const Color(0xFFA2C101),
       backgroundColor: kLightBlack,
       center: Padding(
         padding: EdgeInsets.only(top: Get.height * 0.05),
