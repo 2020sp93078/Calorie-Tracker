@@ -25,6 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   _fetchCalorieData() async {
     _caloriesConsumed = await CalorieService.fetchUserCalorieInfo();
+    _caloriesConsumed = _caloriesConsumed.clamp(0, double.infinity).toInt();
     await UserInfoService.fetchUserData()
         .then((userData) => _totalCalories = userData.dailyCalorieIntake ?? 1);
     setState(() {});
