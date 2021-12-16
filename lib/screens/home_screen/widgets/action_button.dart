@@ -1,3 +1,4 @@
+import 'package:calorie_tracker/common/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
@@ -16,7 +17,7 @@ class ActionButton extends StatelessWidget {
       child: Container(
         decoration: const BoxDecoration(
           shape: BoxShape.circle,
-          color: Color(0xFFFDA104),
+          color: kOrange,
         ),
         padding: const EdgeInsets.all(8),
         child: SvgPicture.asset(

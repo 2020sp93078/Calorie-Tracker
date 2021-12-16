@@ -1,4 +1,5 @@
 import 'package:calorie_tracker/auth/google_auth.dart';
+import 'package:calorie_tracker/common/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
 import 'package:get/get.dart';
@@ -42,7 +43,7 @@ class LoginScreen extends StatelessWidget {
                       height: 36.0,
                     ),
                   ),
-                  backgroundColor: const Color(0xFFFB9B03),
+                  backgroundColor: kOrange,
                   onPressed: () {
                     signInWithGoogle().catchError((error) {
                       final snackBar = SnackBar(

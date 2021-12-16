@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:calorie_tracker/common/constants.dart';
 import 'package:calorie_tracker/models/fetched_food_info.dart';
 import 'package:calorie_tracker/screens/calorie_info_screen/widgets/action_button.dart';
 import 'package:calorie_tracker/screens/calorie_info_screen/widgets/calorie_info.dart';
@@ -96,14 +97,14 @@ class _CalorieInfoScreenState extends State<CalorieInfoScreen> {
                                     fetchedFoodInfo.totalCalories)
                                 .then((value) => Get.back());
                           },
-                          color: const Color(0xFF90C700),
+                          color: kGreen,
                           iconData: Icons.check,
                         ),
                         ActionButton(
                           onTap: () {
                             Get.back();
                           },
-                          color: const Color(0xFFDA3B3B),
+                          color: kRed,
                           iconData: Icons.clear,
                         ),
                       ],

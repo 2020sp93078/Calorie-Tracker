@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:calorie_tracker/common/constants.dart';
 import 'package:calorie_tracker/screens/calorie_info_screen/calorie_info_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -32,7 +33,7 @@ class _CameraButtonState extends State<CameraButton> {
       child: Container(
         decoration: const BoxDecoration(
           shape: BoxShape.circle,
-          color: Color(0xFF90C700),
+          color: kGreen,
         ),
         padding: EdgeInsets.all(Get.width * 0.06),
         child: SvgPicture.asset(
