@@ -78,15 +78,15 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         child: Column(
           children: [
-            const SizedBox(
-              height: 100,
+            SizedBox(
+              height: Get.height * 0.1,
             ),
             DailyProgress(
               caloriesConsumed: _caloriesConsumed,
               totalCalories: _totalCalories,
             ),
-            const SizedBox(
-              height: 120,
+            SizedBox(
+              height: Get.height * 0.2,
             ),
             Column(
               children: [
