@@ -3,6 +3,7 @@ import 'package:calorie_tracker/models/food_items.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get/get_utils/get_utils.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class FoodCalorieInfoService {
   static Future<FetchedFoodInfo> fetchFoodCalorieValue(
@@ -17,10 +18,11 @@ class FoodCalorieInfoService {
 
     try {
       Options options = Options(headers: {
-        "x-app-id": "d10a344b",
-        "x-app-key": "3f3bf5446658e9116dd0c970e8122ada",
+        "x-app-id": dotenv.env['X_APP_ID'],
+        "x-app-key": dotenv.env['X_APP_KEY'],
         "Content-Type": "application/json"
       });
+      await dotenv.load(fileName: ".env");
       response = await Dio().post(
         "https://trackapi.nutritionix.com/v2/natural/nutrients",
         data: '{"query":"$combinedFoodItems","timezone": "US/Eastern"}',
