@@ -12,12 +12,10 @@ class DailyProgress extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CircularPercentIndicator(
-      radius: Get.width * 0.6,
+      radius: 300,
       lineWidth: 8.0,
-      percent: (caloriesConsumed / totalCalories).clamp(0, 1),
-      progressColor: ((caloriesConsumed / totalCalories) > 1)
-          ? const Color(0xFFFDC402)
-          : const Color(0xFFA2C101),
+      percent: caloriesConsumed / totalCalories,
+      progressColor: const Color(0xFFA2C101),
       backgroundColor: const Color(0xFF4E4E4E),
       center: Padding(
         padding: EdgeInsets.only(top: Get.height * 0.05),
@@ -25,16 +23,16 @@ class DailyProgress extends StatelessWidget {
           children: [
             Text(
               '$caloriesConsumed \n/ $totalCalories',
-              style: TextStyle(
-                fontSize: Get.width * 0.12,
+              style: const TextStyle(
+                fontSize: 14,
                 color: Colors.white,
               ),
             ),
-            Text(
+            const Text(
               'cal left',
               style: TextStyle(
-                fontSize: Get.width * 0.08,
-                color: const Color(0xFFFDA104),
+                fontSize: 14,
+                color: Color(0xFFFDA104),
               ),
             ),
           ],

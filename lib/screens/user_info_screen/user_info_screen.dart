@@ -1,7 +1,6 @@
 import 'package:calorie_tracker/models/user_info.dart';
 import 'package:calorie_tracker/screens/home_screen/home_screen.dart';
 import 'package:calorie_tracker/services/user_info_service.dart';
-import 'package:calorie_tracker/utils/validation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -116,22 +115,18 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
                   ),
                   TextFormField(
                     controller: _nameController,
-                    validator: (value) => Validation.validateName(value),
                     decoration: const InputDecoration(labelText: "Name"),
                   ),
                   TextFormField(
                     controller: _ageController,
-                    validator: (value) => Validation.validateAge(value),
                     decoration: const InputDecoration(labelText: "Age"),
                   ),
                   TextFormField(
                     controller: _heightController,
-                    validator: (value) => Validation.validateHeight(value),
                     decoration: const InputDecoration(labelText: "Height (cm)"),
                   ),
                   TextFormField(
                     controller: _weightController,
-                    validator: (value) => Validation.validateWeight(value),
                     decoration: const InputDecoration(labelText: "Weight (kg)"),
                   ),
                 ],

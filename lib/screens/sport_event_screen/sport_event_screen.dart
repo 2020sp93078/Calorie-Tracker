@@ -1,5 +1,5 @@
 import 'package:calorie_tracker/models/sport_event.dart';
-import 'package:calorie_tracker/services/sport_event_service.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
@@ -19,7 +19,22 @@ class _SportEventScreenState extends State<SportEventScreen> {
   void initState() {
     super.initState();
 
-    _fetchSportEvents = SportEventService.fetchSportEvents();
+    _fetchSportEvents = fetchSportEvents();
+  }
+
+  Future<List<SportEvent>> fetchSportEvents() async {
+    List<SportEvent> sportEvents = [];
+    QuerySnapshot response =
+        await FirebaseFirestore.instance.collection('sport_events').get();
+
+    for (var element in response.docs) {
+      SportEvent sportEvent =
+          SportEvent.fromMap(element.data() as Map<String, dynamic>);
+
+      sportEvents.add(sportEvent);
+    }
+
+    return sportEvents;
   }
 
   @override

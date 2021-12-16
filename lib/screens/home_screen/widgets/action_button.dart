@@ -18,10 +18,10 @@ class ActionButton extends StatelessWidget {
           shape: BoxShape.circle,
           color: Color(0xFFFDA104),
         ),
-        padding: EdgeInsets.all(Get.width * 0.04),
+        padding: const EdgeInsets.all(8),
         child: SvgPicture.asset(
           svgPath,
-          width: Get.width * 0.12,
+          width: 40,
         ),
       ),
     );
