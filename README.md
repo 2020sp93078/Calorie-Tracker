@@ -20,3 +20,7 @@ A cross platform mobile application :iphone: developed in flutter to keep track 
 <img src="https://user-images.githubusercontent.com/48833965/146385089-33efa578-18d3-4982-b6f7-0ff18ea03bb6.png"  />
 </p>
 
+# Techstacks Used
+<p float="left">
+<img src="https://user-images.githubusercontent.com/40293521/146385910-5fbd922a-e19a-4588-9895-0dd90404c909.png" width="900" height="500" />
+</p>
