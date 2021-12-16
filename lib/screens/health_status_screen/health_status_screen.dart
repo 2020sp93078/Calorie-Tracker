@@ -1,3 +1,4 @@
+import 'package:calorie_tracker/common/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -13,8 +14,7 @@ class HealthStatusScreen extends StatelessWidget {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () => Get.back(),
-        backgroundColor:
-            isHealthy ? const Color(0xFFA2C101) : const Color(0xFFFDC402),
+        backgroundColor: isHealthy ? kGreen : kYellow,
         child: const Icon(
           Icons.arrow_back,
           color: Colors.black,

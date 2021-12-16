@@ -1,3 +1,4 @@
+import 'package:calorie_tracker/common/constants.dart';
 import 'package:calorie_tracker/models/sport_event.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -40,10 +41,10 @@ class _SportEventScreenState extends State<SportEventScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF262626),
+      backgroundColor: kBackgroundColor,
       appBar: AppBar(
         title: const Text("Sport Events"),
-        backgroundColor: const Color(0xFF262626),
+        backgroundColor: kBackgroundColor,
       ),
       body: Padding(
         padding: EdgeInsets.only(
@@ -97,9 +98,7 @@ class _SportEventScreenState extends State<SportEventScreen> {
                               child: Container(
                                 height: Get.height * 0.1,
                                 width: Get.width,
-                                color: (i % 2 == 0)
-                                    ? const Color(0xFFA2C101)
-                                    : const Color(0xFFFDA104),
+                                color: (i % 2 == 0) ? kGreen : kOrange,
                                 padding: EdgeInsets.all(Get.width * 0.02),
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,

@@ -1,3 +1,4 @@
+import 'package:calorie_tracker/common/constants.dart';
 import 'package:calorie_tracker/models/fetched_food_info.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -22,7 +23,7 @@ class CalorieInfo extends StatelessWidget {
             "Detected Food Items",
             style: TextStyle(
               fontWeight: FontWeight.w600,
-              color: const Color(0xFFFB9B03),
+              color: kOrange,
               fontSize: Get.height * 0.035,
             ),
           ),
@@ -43,7 +44,7 @@ class CalorieInfo extends StatelessWidget {
             "Calories",
             style: TextStyle(
               fontWeight: FontWeight.w600,
-              color: const Color(0xFFFB9B03),
+              color: kOrange,
               fontSize: Get.height * 0.035,
             ),
           ),
