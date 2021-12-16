@@ -24,3 +24,17 @@ A cross platform mobile application :iphone: developed in flutter to keep track 
 <p float="left">
 <img src="https://user-images.githubusercontent.com/40293521/146385910-5fbd922a-e19a-4588-9895-0dd90404c909.png" width="900" height="500" />
 </p>
+
+# Running the application
+
+To run the app on Android device please run the following command:
+
+```flutter build apk --no-sound-null-safety```
+
+To run the app on iOS device please run the following command:
+
+```flutter build ipa --no-sound-null-safety```
+
+To run the app on Web device please run the following command:
+
+```flutter build web--no-sound-null-safety```
